@@ -102,7 +102,7 @@ login_template = """
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+    <div class="bg-white p-16 rounded-lg shadow-lg w-full max-w-md">
         <h2 class="text-xl font-semibold mb-4">Login</h2>
         <form method="POST" action="/login" class="space-y-4">
             <div>
@@ -133,7 +133,7 @@ register_template = """
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+    <div class="bg-white p-16 rounded-lg shadow-lg w-full max-w-md">
         <h2 class="text-xl font-semibold mb-4">Register</h2>
         <form method="POST" action="/register" class="space-y-4">
             <div>
@@ -162,8 +162,8 @@ template="""
   <title>Trip Planner</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 p-4">
-  <div class="max-w-3xl mt-16 mx-auto">
+<body class="bg-gray-100 ">
+  <div class="max-w-3xl p-16 mt-16 mx-auto">
 
     <h1 class="text-3xl font-bold mb-4"> Hey {{user}}, Where Are You Going? <a href="/logout" class="text-blue-500 hover:underline">Logout</a></h1> 
     <form method="POST" action="/">
@@ -210,7 +210,7 @@ error_template = """
     <title>Error</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-16">
     <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg text-center">
         <h1 class="text-3xl font-bold mb-4 text-red-600">Error</h1>
         <p class="text-lg text-gray-700 mb-4">{{ message }}</p>
