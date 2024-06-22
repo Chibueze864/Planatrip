@@ -255,8 +255,10 @@ async def register(response: Response, username: str = Form(...), password: str 
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail="Username already registered"
             )
-        hashed_password = get_password_hash(password.strip())
-        fake_users_db[username] = {"username": username.strip(), "hashed_password": hashed_password}
+        username = username.strip()
+        password = password.strip()
+        hashed_password = get_password_hash(password)
+        fake_users_db[username] = {"username": username, "hashed_password": hashed_password}
         access_token = create_access_token(data={"sub": username})
         response = RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
     
